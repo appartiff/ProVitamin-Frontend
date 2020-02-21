@@ -1,6 +1,6 @@
 # topkek
 
-> My best Nuxt.js project
+> Tita Ecommerce nuxt.js project
 
 ## Build Setup
 
