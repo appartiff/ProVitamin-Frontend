@@ -10,12 +10,6 @@
     props:
       {
         text: String
-      },
-    computed:
-      {
-        appIcon() {
-          return this.icon;
-        }
       }
   }
 </script>
@@ -25,7 +19,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 6em;
+    padding: 0 1em;
   }
 
   svg {

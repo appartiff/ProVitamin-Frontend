@@ -1,0 +1,9 @@
+﻿@use '../variables/fonts';
+@mixin primary-font {
+  font-family: fonts.$primary-font-family;
+  font-weight: 300;
+}
+@mixin secondary-font {
+  font-family: fonts.$primary-font-family;
+  font-weight: 400;
+}

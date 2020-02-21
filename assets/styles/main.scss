@@ -1,0 +1,29 @@
+﻿@use './variables/colors';
+@import './partials/_typography';
+@import './partials/_menus.scss';
+body {
+  background-color: white;
+}
+
+
+.color-background--dark-shade
+{
+  background-color: #29273F;
+}
+.color-background--dark-shade-lighter
+{
+  background-color: #535265;
+}
+.desktop--max-width
+{
+  max-width: 1200px;
+}
+.text--color--light-shades
+{
+  color: colors.$color--light-shades;
+}
+
+.hover--text-color:hover
+{
+  color:#EE8D5A;
+}
