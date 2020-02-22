@@ -25,10 +25,13 @@ export default {
   css: [
     '~/assets/styles/main.css'
   ],
+  
+  
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/directives.js'
   ],
   /*
   ** Nuxt.js dev-modules

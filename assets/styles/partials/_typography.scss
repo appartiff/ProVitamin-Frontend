@@ -1,16 +1,16 @@
-﻿@use '../mixins/fonts';
+﻿@import '../mixins/fonts';
 
 html {
   font-size: 14px;
 }
 
 input {
-  @include fonts.secondary-font;
+  @include secondary-font;
   line-height: 1.65;
 }
 body {
   line-height: 1.65;
-  @include fonts.secondary-font;
+  @include secondary-font;
   color: #333;
 }
 p {
@@ -18,7 +18,7 @@ p {
 }
 h1, h2, h3, h4, h5 {
   margin: 2.75rem 0 1.05rem;
-  @include fonts.primary-font;
+  @include primary-font;
   line-height: 1.15;
 }
 

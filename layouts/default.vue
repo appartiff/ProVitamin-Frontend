@@ -21,17 +21,16 @@
                         <div class="flex-container sub-nav desktop--max-width width-full">
                             <ul class="text--color--light-shades">
                                 <li>
-                                    <NavigationCell text="Produkter">
-                                        <font-awesome-icon slot="icon" :icon="['fas', 'chevron-down']"/>
-                                    </NavigationCell>
+                                    <Products></Products>
                                 </li>
                                 <li>
-                                    <NavigationCell text="Merker">
-                                    <font-awesome-icon slot="icon" :icon="['fas', 'chevron-down']"/>
-                                </NavigationCell>
+                                    <Brands></Brands>
                                 </li>
-                                <NavigationCell text="Tilbud">
-                                </NavigationCell>
+                                <li>
+                                    <NavigationCell text="Tilbud">
+                                    </NavigationCell>
+                                </li>
+                               
                             </ul>
                         </div>
                     </div>
@@ -46,14 +45,17 @@
     import NavigationLogin from '../components/navigation/NavigationLogin';
     import Basket from '../components/navigation/Basket';
     import NavigationCell from '../components/buttons/NavigationCell';
-
+    import Products from '../components/menuNavigation/Products';
+    import Brands from '../components/menuNavigation/Brands';
     export default {
         components:
             {
                 SearchInput,
                 NavigationLogin,
                 Basket,
-                NavigationCell
+                NavigationCell,
+                Products,
+                Brands
             }
     }
 </script>
@@ -102,15 +104,10 @@
         display: flex;
         align-items: center;
     }
-
-    .sub-nav {
-    }
-
     .flex-container {
         display: flex;
         color: #fff;
     }
-
     .search-container {
         flex-grow: 1;
         display: flex; /* establish flex container */
