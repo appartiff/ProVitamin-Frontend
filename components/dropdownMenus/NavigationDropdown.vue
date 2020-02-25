@@ -20,12 +20,36 @@
     }
 </script>
 
-<style scoped>
-    /* Dropdown Content (Hidden by Default) */
-    
-    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-    .show {
+
+
+<style lang="scss" scoped>
+    @import '~/assets/styles/variables/_colors.scss';
+    @import '~/assets/styles/variables/_fonts.scss';
+    .show  {
+        display: block!important;
+    }
+    .navigation-dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .navigation-dropdown-content a {
+        color: $color--dark-shade;
+
+        padding: 12px 16px;
+        text-decoration: none;
+        border-bottom: 1px solid $color--light-shades-darker;
         display: block;
     }
 
+    /* Change color of dropdown links on hover */
+    .navigation-dropdown-content a:hover {
+        background-color: $color--light-shades;
+    }
 </style>

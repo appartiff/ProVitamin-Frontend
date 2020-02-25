@@ -1,28 +1,8 @@
-﻿@import './variables/colors';
-@import './partials/_typography';
-@import './partials/_menus.scss';
-@import './partials/_buttons.scss';
-@import './partials/_colors.scss';
-@import './partials/_dropdowns.scss';
+﻿@import './partials/_typography';
 body{
   background-color: white;
 }
-.color-background--dark-shade
-{
-  background-color: $color--dark-shade;
-}
-.color-background--dark-shade-lighter
-{
-  background-color:$color--dark-shade-lighter;
-}
-.text--color--light-shades
-{
-  color: $color--light-shades;
-}
-.hover--text-color:hover
-{
-  color:#EE8D5A;
-}
+
 .desktop--max-width
 {
   max-width: 1200px;

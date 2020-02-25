@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header class="color-background--dark-shade">
+        <header>
             <div id="navbar">
                 <section class="header-section">
                     <div class="content--center">
@@ -19,7 +19,7 @@
                     </div>
                     <div class="content--center">
                         <div class="flex-container sub-nav desktop--max-width width-full">
-                            <ul class="text--color--light-shades">
+                            <ul>
                                 <li>
                                     <Products></Products>
                                 </li>
@@ -30,7 +30,7 @@
                                     <NavigationCell text="Tilbud">
                                     </NavigationCell>
                                 </li>
-                               
+
                             </ul>
                         </div>
                     </div>
@@ -47,6 +47,7 @@
     import NavigationCell from '../components/buttons/NavigationCell';
     import Products from '../components/menuNavigation/Products';
     import Brands from '../components/menuNavigation/Brands';
+
     export default {
         components:
             {
@@ -61,17 +62,25 @@
 </script>
 
 <style>
-    html {
-        box-sizing: border-box;
-    }
-
     *,
     *:before,
     *:after {
         box-sizing: border-box;
         margin: 0;
     }
+</style>
+<style scoped lang="scss">
 
+    @import '~/assets/styles/variables/_colors.scss';
+    @import '~/assets/styles/variables/_fonts.scss';
+    
+    html {
+        box-sizing: border-box;
+    }
+    
+    header {
+        background-color: $color--dark-shade;
+    }
     .main-nav {
         padding: 1em;
     }
@@ -88,26 +97,17 @@
     .width-full {
         width: 100%;
     }
-
-    .content--horizontal-center {
-        display: flex;
-        justify-content: center;
-    }
-
+    
     .content--center {
         display: flex;
         justify-content: center;
-        align-items: center;
-    }
-
-    .content--vertical-center {
-        display: flex;
         align-items: center;
     }
     .flex-container {
         display: flex;
         color: #fff;
     }
+
     .search-container {
         flex-grow: 1;
         display: flex; /* establish flex container */
@@ -129,6 +129,7 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
+        color: $color--light-shades;
     }
 
     li {

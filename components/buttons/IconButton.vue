@@ -1,7 +1,7 @@
 <template>
   <a class="icon-button">
     <slot name="icon"></slot>
-    <span class="text--color--light-shades">{{text}}</span>
+    <span>{{text}}</span>
   </a>
 </template>
 
@@ -14,7 +14,14 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+  @import '~/assets/styles/variables/_colors.scss';
+  @import '~/assets/styles/variables/_fonts.scss';
+  
+  span {
+    color: $color--light-shades;
+  }
   .icon-button {
     display: flex;
     flex-direction: column;

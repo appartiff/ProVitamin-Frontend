@@ -52,10 +52,10 @@ export default {
           set: '@fortawesome/free-solid-svg-icons',
           icons: ['faSearch','faUser','faShoppingBasket','faChevronDown','faChevronUp']
         },
-        {
-          set:'@fortawesome/free-brands-svg-icons',
-          icons: ['fab']
-        }
+        // {
+        //   set:'@fortawesome/free-brands-svg-icons',
+        //   icons: ['fab']
+        // }
       ]
     }],
     // Doc: https://axios.nuxtjs.org/usage
@@ -63,8 +63,6 @@ export default {
   ],
   styleResources: {
     scss: [
-      './assets/styles/mixins/*.scss',
-      './assets/styles/variables/*.scss',
     ]
   },
   /*
