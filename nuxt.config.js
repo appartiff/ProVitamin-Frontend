@@ -44,6 +44,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/style-resources',
     [
       'nuxt-fontawesome', {
       imports: [
@@ -60,6 +61,12 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
   ],
+  styleResources: {
+    scss: [
+      './assets/styles/mixins/*.scss',
+      './assets/styles/variables/*.scss',
+    ]
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options

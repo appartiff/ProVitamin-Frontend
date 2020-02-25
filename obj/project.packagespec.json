@@ -1,11 +1,14 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\black\\Dropbox\\apexbot\\Apexbot_core\\Tita-SPA\\SPA.csproj",
+    "projectUniqueName": "E:\\Apexbot\\Tita-SPA\\SPA.csproj",
     "projectName": "SPA",
-    "projectPath": "C:\\Users\\black\\Dropbox\\apexbot\\Apexbot_core\\Tita-SPA\\SPA.csproj",
-    "outputPath": "C:\\Users\\black\\Dropbox\\apexbot\\Apexbot_core\\Tita-SPA\\obj\\",
+    "projectPath": "E:\\Apexbot\\Tita-SPA\\SPA.csproj",
+    "outputPath": "E:\\Apexbot\\Tita-SPA\\obj\\",
     "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
     "originalTargetFrameworks": [
       "netcoreapp3.1"
     ],
@@ -44,7 +47,7 @@
           "privateAssets": "all"
         }
       },
-      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
     }
   }
 }
