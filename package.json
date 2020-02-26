@@ -16,13 +16,12 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@nuxtjs/axios": "^5.3.6",
     "nuxt": "^2.0.0",
-    "nuxt-fontawesome": "^0.4.0",
-    "vue-click-outside": "^1.0.7",
     "vue-clickaway": "^2.2.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/fontawesome": "^1.1.1",
     "@nuxtjs/style-resources": "^1.0.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^6.1.0",
