@@ -19,4 +19,4 @@ module.exports = {
     "no-trailing-spaces":"off",
     "no-multiple-empty-lines":"off"
   }
-}
+};

@@ -1,7 +1,6 @@
 <template>
-
   <IconButton text="Handlekurv">
-    <font-awesome-icon slot="icon" :icon="['fas', 'shopping-basket']"/>
+    <font-awesome-icon slot="icon" :icon="['fas', 'shopping-basket']" />
   </IconButton>
 </template>
 

@@ -1,44 +1,45 @@
 <template>
-    <div>
-        <header>
-            <div id="navbar">
-                <section class="header-section">
-                    <div class="content--center">
-                        <div class="flex-container main-nav desktop--max-width width-full">
-                            <div class="logo-container">logo</div>
-                            <div class="search-container">
-                                <SearchInput></SearchInput>
-                            </div>
-                            <div class="nav-right-container">
-                                <nav>
-                                    <NavigationLogin></NavigationLogin>
-                                    <Basket></Basket>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content--center">
-                        <div class="flex-container sub-nav desktop--max-width width-full">
-                            <ul>
-                                <li>
-                                    <Products></Products>
-                                </li>
-                                <li>
-                                    <Brands></Brands>
-                                </li>
-                                <li>
-                                    <NavigationCell text="Tilbud">
-                                    </NavigationCell>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+  <div>
+    <header>
+      <div id="navbar">
+        <section class="header-section">
+          <div class="content--center">
+            <div class="flex-container main-nav desktop--max-width width-full">
+              <div class="logo-container">
+                <img class="logo" src="~/assets/images/Logo.png">
+              </div>
+              <div class="search-container">
+                <SearchInput />
+              </div>
+              <div class="nav-right-container">
+                <nav>
+                  <NavigationLogin />
+                  <Basket />
+                </nav>
+              </div>
             </div>
-        </header>
-        <nuxt/>
-    </div>
+          </div>
+          <div class="content--center">
+            <div class="flex-container sub-nav desktop--max-width width-full">
+              <ul>
+                <li>
+                  <Products />
+                </li>
+                <li>
+                  <Brands />
+                </li>
+                <li>
+                  <NavigationCell text="Tilbud" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+    <nuxt />
+    <Footer />
+  </div>
 </template>
 <script>
     import SearchInput from '../components/navigation/SearchInput';
@@ -47,7 +48,7 @@
     import NavigationCell from '../components/buttons/NavigationCell';
     import Products from '../components/menuNavigation/Products';
     import Brands from '../components/menuNavigation/Brands';
-
+    import Footer from '~/components/layout/Footer';
     export default {
         components:
             {
@@ -56,7 +57,9 @@
                 Basket,
                 NavigationCell,
                 Products,
-                Brands
+                Brands,
+                Footer
+                
             }
     }
 </script>
@@ -71,8 +74,7 @@
 </style>
 <style scoped lang="scss">
 
-    @import '~/assets/styles/variables/_colors.scss';
-    @import '~/assets/styles/variables/_fonts.scss';
+  @import '~/assets/styles/variables/_variables.scss';
     
     html {
         box-sizing: border-box;
@@ -122,6 +124,8 @@
 
     .nav-right-container {
         flex-grow: 1;
+      display: flex;
+      align-items: center;
     }
 
     ul {

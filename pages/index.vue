@@ -3,7 +3,9 @@
     <h1 class="title">
       topkek
     </h1>
-    <nuxt-link to="/produkter">Produkter</nuxt-link>
+    <nuxt-link to="/produkter">
+      Produkter
+    </nuxt-link>
   </div>
 </template>
 
