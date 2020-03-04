@@ -19,8 +19,8 @@
               </div>
             </div>
           </div>
-          <div class="content--center">
-            <div class="flex-container sub-nav desktop--max-width width-full">
+          <div class="content--center sub-nav">
+            <div class="flex-container desktop--max-width width-full">
               <ul>
                 <li>
                   <Products />
@@ -84,9 +84,11 @@
         background-color: $color--dark-shade;
     }
     .main-nav {
-        padding: 1em;
+      padding: 1em;
     }
-
+    .sub-nav{
+      background: #50546D;
+    }
     #navbar * {
         box-sizing: border-box;
     }
@@ -107,6 +109,7 @@
     }
     .flex-container {
         display: flex;
+      flex-wrap: wrap;
         color: #fff;
     }
 
@@ -117,9 +120,29 @@
         justify-content: center; /* center items vertically, in this case */
         align-items: center; /* center items horizontally, in this case */
     }
+  @media #{$mobile} {
+    .search-container{
+      order: 1;
+      padding: 1em!important;
+    }
+  }
+  @media #{$tablet} {
+    .search-container{
+      order: 1;
+      padding: 1em!important;
+    }
+    .nav-right-container {
+      justify-content: right!important;
+  }
+    .logo-container {
 
+      justify-content: left!important;
+    }
+  }
     .logo-container {
         flex-grow: 1; /* default 0 */
+      display: flex;
+      justify-content: center;
     }
 
     .nav-right-container {

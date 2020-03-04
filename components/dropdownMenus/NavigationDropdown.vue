@@ -22,8 +22,7 @@
 
 
 <style lang="scss" scoped>
-    @import '~/assets/styles/variables/partials/_colors.scss';
-    @import '~/assets/styles/variables/partials/_fonts.scss';
+  @import '~/assets/styles/variables/_variables.scss';
     .show  {
         display: block!important;
     }

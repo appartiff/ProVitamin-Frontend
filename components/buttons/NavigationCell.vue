@@ -19,12 +19,11 @@
     }
 </script>
 <style scoped lang="scss">
-    @import '~/assets/styles/variables/partials/_colors.scss';
-    @import '~/assets/styles/variables/partials/_fonts.scss';
+    @import '~/assets/styles/variables/_variables.scss';
     
     .navigation-cell {
         background-color: transparent;
-        padding: 0.8em 1em;
+        padding: 1em;
         text-transform: uppercase;
         color:  $color--light-shades-lighter;
         border: 0;
@@ -36,10 +35,10 @@
         color:$color--light-shades;
     }
     .navigation-cell:hover {
-        background-color: $color--light-shades-lighter;
+        background-color: $color--light-accent;
 
     }
     .navigation-cell--active {
-        background-color: $color--light-shades-lighter;
+        background-color: $color--light-accent;
     }
 </style>

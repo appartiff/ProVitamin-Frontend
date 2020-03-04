@@ -57,6 +57,7 @@
     @media #{$mobile} {
         .main-content--container{
            justify-content: normal!important;
+            flex-direction: column;
         }
     }
 
@@ -78,5 +79,8 @@
     }
     li span{
         color:$color--main-brand;
+    }
+    li span:hover{
+        color:$color--light-shades;
     }
 </style>

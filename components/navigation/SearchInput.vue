@@ -16,8 +16,8 @@
   }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  @import '~/assets/styles/variables/_variables.scss';
   form
   {
     align-items: center;
@@ -29,6 +29,13 @@
   input{
     min-width:400px;
   }
+  @media #{$mobile} {
+    input{
+      min-width: 250px!important;
+
+    }
+  }
+
   input,.search
   {
     display: inline-block;

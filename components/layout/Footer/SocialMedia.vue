@@ -1,16 +1,16 @@
 <template>
     <div class="container--social-media">
-        <div class="social-logo">
+        <div class="social-box">
             <a>
                 <font-awesome-icon slot="icon" :icon="['fab', 'facebook']" />
             </a>
         </div>
-        <div class="social-logo">
+        <div class="social-box">
             <a>
                 <font-awesome-icon slot="icon" :icon="['fab', 'instagram']" />
             </a>
         </div>
-        <div class="social-logo">
+        <div class="social-box">
             <a>
                 <font-awesome-icon slot="icon" :icon="['fab', 'linkedin']" />
             </a>
@@ -26,23 +26,23 @@
 
 <style lang="scss" scoped>
     @import '~/assets/styles/variables/_variables.scss';
-    .social-logo{
+    .social-box{
         margin:0 0.512em;
         padding:0.8em;
         background: $color--dark-shade-lighter;
         border-radius:4px;
     }
-    .social-logo:hover{
-        background: $color--main-brand;
+    .social-box:hover{
+        background: $color--light-accent;
     }
-    .social-logo > a {
+    .social-box> a {
         display:flex;
         align-items: center;
         width:100%;
         height:100%;
 
     }
-    .social-logo  svg {
+    .social-box  svg {
         height: 2.441em;
         width: 2.441em;
         font-size:1em;
