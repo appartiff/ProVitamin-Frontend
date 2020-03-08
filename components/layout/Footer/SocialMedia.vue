@@ -43,8 +43,8 @@
 
     }
     .social-box  svg {
-        height: 2.441em;
-        width: 2.441em;
+        height: 1.953em;
+        width: 1.953em;
         font-size:1em;
         color:white;
     }
@@ -55,7 +55,7 @@
         align-items: center;
         flex-flow: row wrap;
         padding: 1.25em 0;
-        border-bottom: 1px solid $color--light-shades;
+        border-bottom: 1px solid $color--dark-shade-lighter;
     }
 
 </style>

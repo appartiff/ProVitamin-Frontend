@@ -1,9 +1,12 @@
 <template>
-  <div class="navigation-dropdown-content" :class="stateChanged === true ? 'show' :''">
-    <a href="#">Vitaminer</a>
-    <a href="#">Mineraler</a>
-    <a href="#">Aminosyrer</a>
+  <div>
+    <div class="navigation-dropdown-content" :class="stateChanged === true ? 'show' :''">
+      <a href="#">Vitaminer</a>
+      <a href="#">Mineraler</a>
+      <a href="#">Aminosyrer</a>
+    </div>
   </div>
+
 </template>
 
 <script>
@@ -18,9 +21,6 @@
         }
     }
 </script>
-
-
-
 <style lang="scss" scoped>
   @import '~/assets/styles/variables/_variables.scss';
     .show  {
@@ -31,7 +31,6 @@
         position: absolute;
         background-color: white;
         min-width: 160px;
-
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
     }

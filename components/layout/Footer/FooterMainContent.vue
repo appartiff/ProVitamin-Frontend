@@ -1,35 +1,58 @@
 <template>
-    <div class="main-content">
-        <div class="main-content--container desktop--max-width">
-            <article>
-                <h3>Kontakt</h3>
-                <ul>
-                    <li>E-mail:  <span>support@topkek.as</span></li>
-                    <li>Telefon: <span>93274125</span></li>
-                </ul>
-            </article>
-            <article>
-                <h3>Informasjon</h3>
-                <ul>
-                    <li><span>Retur</span></li>
-                    <li><span>Reklamasjon</span></li>
-                    <li><span>Levering</span></li>
-                    <li><span>Kjøpsbetingelser</span></li>
-                    <li><span>Personvern</span></li>
-                </ul>
-            </article>
-            <article>
-                <h3>Kundeservice</h3>
-                <ul>
-                    <li><span>Spørsmål & svar</span></li>
-                </ul>
-            </article>
-            <article>
-                <img class="logo" src="~/assets/images/Logo.png">
-            </article>
-        </div>
-
+  <div class="main-content">
+    <div class="main-content--container desktop--max-width">
+      <article>
+        <h3>Kontakt</h3>
+        <ul>
+          <li>E-mail:  <span>support@topkek.as</span></li>
+          <li>Telefon: <span>93 27 41 25</span></li>
+        </ul>
+      </article>
+      <article>
+        <h3>Informasjon</h3>
+        <ul>
+          <li>
+            <nuxt-link to="/informasjon/retur">
+              Retur
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/informasjon/reklamasjon">
+              Reklamasjon
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/informasjon/levering">
+              Levering
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/informasjon/kjøpsbetingelser">
+              Kjøpsbetingelser
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/informasjon/personvern">
+              Personvern
+            </nuxt-link>
+          </li>
+        </ul>
+      </article>
+      <article>
+        <h3>Kundeservice</h3>
+        <ul>
+          <li>
+            <nuxt-link to="/kundeservice/spørsmål-og-svar">
+              Spørsmål & svar
+            </nuxt-link>
+          </li>
+        </ul>
+      </article>
+      <article>
+        <img class="logo" src="~/assets/images/Logo.svg">
+      </article>
     </div>
+  </div>
 </template>
 
 <script>
@@ -82,5 +105,13 @@
     }
     li span:hover{
         color:$color--light-shades;
+    }
+
+    li a{
+      color:$color--main-brand;
+      text-decoration: none;
+    }
+    li a:hover{
+      color:$color--light-shades;
     }
 </style>

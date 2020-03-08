@@ -6,8 +6,8 @@
 </template>
 
 <script>
-  import SocialMedia from '~/components/layout/Footer/SocialMedia';
-  import FooterMainContent from '~/components/layout/Footer/FooterMainContent';
+  import SocialMedia from '@/components/layout/Footer/SocialMedia';
+  import FooterMainContent from '@/components/layout/Footer/FooterMainContent';
     export default {
       components: {
         SocialMedia,

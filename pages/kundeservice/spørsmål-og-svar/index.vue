@@ -1,7 +1,7 @@
 <template>
   <div class="container desktop--max-width">
     <h1 class="title">
-      topkek
+      Spørsmål og svar
     </h1>
     <nuxt-link to="/produkter">
       Produkter
@@ -11,12 +11,14 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: 'About page'
+    };
+  }
 }
 </script>
 
 <style>
 
-.title {
-  color: #35495e;
-}
 </style>

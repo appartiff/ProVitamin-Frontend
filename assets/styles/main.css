@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  margin-top: 0;
+  margin: 0 0 1.05rem;
   font-size: 3.052em;
 }
 
@@ -68,6 +68,42 @@ ul {
 
 .logo {
   height: 5em;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.content--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.width-full {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,11 +1,12 @@
 <template>
-  <IconButton text="Handlekurv">
-    <font-awesome-icon slot="icon" :icon="['fas', 'shopping-basket']" />
+  <IconButton text="Logg inn">
+    <font-awesome-icon slot="icon" :icon="['fas', 'user']"/>
   </IconButton>
 </template>
 
 <script>
-  import IconButton from '../buttons/IconButton';
+  import IconButton from '../../../buttons/IconButton';
+
   export default {
     components:
       {

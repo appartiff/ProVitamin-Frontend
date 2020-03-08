@@ -1,22 +1,20 @@
+
 <template>
   <div class="container desktop--max-width">
     <h1 class="title">
-      topkek
+      kjøpsbetingelser
     </h1>
-    <nuxt-link to="/produkter">
-      Produkter
-    </nuxt-link>
   </div>
 </template>
 
+
 <script>
-export default {
-}
+
+    export default {
+        name: 'Index'
+    }
 </script>
 
-<style>
+<style scoped>
 
-.title {
-  color: #35495e;
-}
 </style>
