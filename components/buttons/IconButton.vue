@@ -38,7 +38,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 1em;
+    padding: 0 0.5em!important;
+  }
+  @media #{$desktop} {
+    padding: 0 1em!important;
   }
   .icon-button:hover .icon-box{
     background: $color--light-accent;

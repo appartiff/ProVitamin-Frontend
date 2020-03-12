@@ -56,11 +56,7 @@
       order: 1;
       padding: 1em!important;
     }
-    .nav-right-container {
-      justify-content: right!important;
-    }
     .logo-container {
-
       justify-content: left!important;
     }
   }
@@ -74,5 +70,6 @@
     flex-grow: 1;
     display: flex;
     align-items: center;
+    justify-content: right!important;
   }
 </style>

@@ -114,4 +114,7 @@
     li a:hover{
       color:$color--light-shades;
     }
+  a.nuxt-link-active{
+    color:$color--light-shades;
+  }
 </style>

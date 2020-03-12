@@ -7,7 +7,7 @@
       </section>
     </header>
     <div class="site-content">
-      <Breadcrumbs />
+      <Breadcrumbs/>
       <nuxt />
     </div>
 
