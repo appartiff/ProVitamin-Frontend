@@ -3,17 +3,21 @@
     <NavigationCell text="Merker" :on-click="buttonClicked">
       <font-awesome-icon slot="icon" :icon="['fas', 'chevron-down']" />
     </NavigationCell>
-    <NavigationDropdown :state="stateChanged" />
+    <NavigationDropdown :state="stateChanged">
+      <BrandsDropdownList/>
+    </NavigationDropdown>
   </div>
 </template>
 <script>
     import { mixin as clickaway } from 'vue-clickaway';
     import NavigationDropdown from '../../../dropdownMenus/NavigationDropdown';
     import NavigationCell from '../../../buttons/NavigationCell';
+    import BrandsDropdownList from '@/components/dropdownMenus/BrandsDropdownList';
     export default {
         components: {
             NavigationCell,
-            NavigationDropdown
+            NavigationDropdown,
+          BrandsDropdownList
         },
         mixins: [clickaway],
         data() {

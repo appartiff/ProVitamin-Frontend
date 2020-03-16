@@ -52,5 +52,6 @@
     font-size: 1.2em;
     height: 1em;
     width:1em!important;
+    color: #fff;
   }
 </style>

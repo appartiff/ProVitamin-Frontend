@@ -70,6 +70,9 @@ export default {
             preset: {
                 features: {
                     customProperties: false
+                },
+                autoprefixer: {
+                    grid: true
                 }
             }
         },

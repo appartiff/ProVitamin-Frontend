@@ -1,29 +1,30 @@
 <template>
-  <article class="product-item">
-    <div class="image-container">
-      <img class="post-thumbnail" :src="thumbnail">
-    </div>
-    <div class="content-container">
-      <div class="description-container">
-        <h2>{{ title }}</h2>
+  <article class="product-item text-center">
+    <nuxt-link :to="`produkter/${id}`">
+      <div class="image-container">
+        <img class="post-thumbnail" :src="thumbnail">
       </div>
-      <div class="card-bottom">
-        <div class="price-wrapper">
-          <div class="price">
-            <span>{{ price | toPriceFormat }}</span>
+      <div class="content-container">
+        <div class="description-container">
+          <h2>{{ title }}</h2>
+        </div>
+        <div class="card-bottom">
+          <div class="price-wrapper">
+            <div class="price">
+              <span>{{ price | toPriceFormat }}</span>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <BuyButton text="Kjøp" rounded="true" />
           </div>
         </div>
-        <div class="button-wrapper">
-          <BuyButton></BuyButton>
-        </div>
       </div>
-
-    </div>
+    </nuxt-link>
   </article>
 </template>
 
 <script>
-  import BuyButton from '@/components/buttons/BuyButton';
+    import BuyButton from '@/components/buttons/FlatButton';
     export default {
       components: {
         BuyButton
@@ -45,6 +46,10 @@
         description: {
           type: String,
           required: false
+        },
+        id: {
+          type: Number,
+          required: true
         },
         thumbnail: String
       }
@@ -78,6 +83,10 @@
       font-weight: 700;
       font-size: 1.55em;
       text-align: left;
+
+      span {
+        color: $color--dark-shade;
+      }
     }
   }
 
@@ -94,7 +103,6 @@
     flex-direction: column
   }
 .post-thumbnail {
-
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -109,4 +117,6 @@ h2 {
   font-weight: 700;
   flex-grow: 1;
 }
+
+
 </style>

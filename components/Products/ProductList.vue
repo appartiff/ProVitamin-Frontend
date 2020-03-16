@@ -7,6 +7,7 @@
       :title="product.details.title"
       :description="product.details.description"
       :thumbnail="product.imageUrl"
+      :id="product.id"
     />
   </div>
 </template>

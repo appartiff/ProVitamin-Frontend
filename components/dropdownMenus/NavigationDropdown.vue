@@ -1,9 +1,7 @@
 <template>
   <div>
     <div class="navigation-dropdown-content" :class="stateChanged === true ? 'show' :''">
-      <a href="#">Vitaminer</a>
-      <a href="#">Mineraler</a>
-      <a href="#">Aminosyrer</a>
+      <slot></slot>
     </div>
   </div>
 
@@ -34,17 +32,21 @@
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
     }
-    /* Links inside the dropdown */
-    .navigation-dropdown-content a {
-        color: $color--dark-shade;
+</style>
+<style lang="scss">
+  @import '~/assets/styles/variables/_variables.scss';
+  /* Links inside the dropdown */
+  .navigation-dropdown-content a {
+    color: $color--dark-shade;
 
-        padding: 12px 16px;
-        text-decoration: none;
-        border-bottom: 1px solid $color--light-shades-darker;
-        display: block;
-    }
-    /* Change color of dropdown links on hover */
-    .navigation-dropdown-content a:hover {
-        background-color: $color--light-shades;
-    }
+    padding: 12px 16px;
+    text-decoration: none;
+    border-bottom: 1px solid $color--light-shades-darker;
+    display: block;
+  }
+  /* Change color of dropdown links on hover */
+  .navigation-dropdown-content a:hover {
+    background-color: $color--light-shades;
+  }
+
 </style>

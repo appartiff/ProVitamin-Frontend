@@ -63,7 +63,7 @@
   .logo-container {
     flex-grow: 1; /* default 0 */
     display: flex;
-    justify-content: center;
+    justify-content: left;
   }
 
   .nav-right-container {

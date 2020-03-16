@@ -75,6 +75,9 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.text-center {
   text-align: center;
 }
 
@@ -95,7 +98,6 @@ ul {
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  color: #fff;
 }
 
 .width-full {
@@ -104,6 +106,10 @@ ul {
 
 .flex {
   display: flex;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=main.css.map */

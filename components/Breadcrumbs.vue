@@ -17,26 +17,33 @@
 </template>
 
 <script>
+    import { mapGetters } from 'vuex';
     export default {
-      filters: {
-        toSpaceFromHyphen(value) {
-          return value.replace(/-/g, ' ');
-        }
-      },
+        filters: {
+            toSpaceFromHyphen(value) {
+                return value.replace(/-/g, ' ');
+            }
+        },
         data() {
             return {
-                breadList: [], 
-              show: true
+                breadList: [],
+                show: true
             }
         },
         computed: {
+            ...mapGetters({
+                getTitleById: 'products/titleById'
+            }),
             breadcrumbs() {
                 return this.breadList;
+            },
+            title() {
+                return this.getTitleById(this.$route.params.id);
             }
         },
 
         watch: {
-            '$route' () {
+            '$route'() {
                 this.updateList();
             }
         },
@@ -44,15 +51,36 @@
             this.updateList();
         },
         methods: {
-            updateList () {
+            updateList() {
                 this.breadList = this.$route.matched;
                 this.show = !(this.breadList.length === 1 && this.breadList[0].path === '');
-                console.log(this.$route.matched);
             },
             getLatest(item) {
                 const splitted = item.split('/');
-                console.log(splitted[splitted.length - 1].length);
+                if (splitted[splitted.length - 1].includes(':')) {
+                  return this.title;
+                }
                 return splitted[splitted.length - 1];
+            },
+            occurrences(string, subString, allowOverlapping) {
+                string += '';
+                subString += '';
+                if (subString.length <= 0) {
+                    return (string.length + 1);
+                }
+                let n = 0;
+                let pos = 0;
+                const step = allowOverlapping ? 1 : subString.length;
+                while (true) {
+                    pos = string.indexOf(subString, pos);
+                    if (pos >= 0) {
+                        ++n;
+                        pos += step;
+                    } else {
+                        break;
+                    }
+                }
+                return n;
             }
         }
     }
@@ -61,13 +89,16 @@
 
 <style lang="scss" scoped>
     @import '~/assets/styles/variables/_variables.scss';
-    span{
+
+    span {
         color: $color--dark-shade;
         user-select: none;
     }
-    .breadcrumb{
+
+    .breadcrumb {
         margin: 0 auto;
     }
+
     ul {
         padding: 10px 16px;
         list-style: none;
@@ -77,11 +108,11 @@
     ul li {
         display: inline;
         font-size: 1em;
-        text-transform:capitalize;
+        text-transform: capitalize;
     }
 
     /* Add a slash symbol (/) before/behind each list item */
-    ul li+li:before {
+    ul li + li:before {
         padding: 8px;
         color: black;
         content: "/\00a0";
