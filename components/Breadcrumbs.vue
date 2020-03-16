@@ -2,7 +2,7 @@
   <div v-if="show" class="flex-container breadcrumb desktop--max-width">
     <ul>
       <li>
-        <nuxt-link to="/">
+        <nuxt-link to="/#">
           Hjem
         </nuxt-link>
       </li>
@@ -57,31 +57,17 @@
             },
             getLatest(item) {
                 const splitted = item.split('/');
-                if (splitted[splitted.length - 1].includes(':')) {
+                if (splitted[splitted.length - 1].includes(':id')) {
                   return this.title;
                 }
+              if (splitted[splitted.length - 1].includes(':brand')) {
+                return this.toSpaceFromHyphen(this.$route.params.brand);
+              }
                 return splitted[splitted.length - 1];
             },
-            occurrences(string, subString, allowOverlapping) {
-                string += '';
-                subString += '';
-                if (subString.length <= 0) {
-                    return (string.length + 1);
-                }
-                let n = 0;
-                let pos = 0;
-                const step = allowOverlapping ? 1 : subString.length;
-                while (true) {
-                    pos = string.indexOf(subString, pos);
-                    if (pos >= 0) {
-                        ++n;
-                        pos += step;
-                    } else {
-                        break;
-                    }
-                }
-                return n;
-            }
+          toSpaceFromHyphen(value) {
+            return value.replace(/-/g, ' ');
+          }
         }
     }
 

@@ -3,9 +3,6 @@
     <h1 class="title">
       Spørsmål og svar
     </h1>
-    <nuxt-link to="/produkter">
-      Produkter
-    </nuxt-link>
   </div>
 </template>
 

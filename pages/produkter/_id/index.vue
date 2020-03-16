@@ -3,7 +3,7 @@
     <div class="product-container">
       <section class="product-title-section">
         <h1>{{ product.details.title }}</h1>
-        <span> Av: <nuxt-link :to="`/produkter/${toHyphenAndLowerCaseFromSpace(product.details.brand)}`">{{ product.details.brand }} </nuxt-link> </span>
+        <span> Av: <nuxt-link :to="`/merker/${toHyphenAndLowerCaseFromSpace(product.details.brand)}`">{{ product.details.brand }} </nuxt-link> </span>
       </section>
       <section class="image-section">
         <img class="product-image" :src="product.imageUrl">

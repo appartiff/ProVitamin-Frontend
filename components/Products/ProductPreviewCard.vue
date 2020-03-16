@@ -1,6 +1,6 @@
 <template>
   <article class="product-item text-center">
-    <nuxt-link :to="`produkter/${id}`">
+    <nuxt-link :to="`/produkter/${id}`">
       <div class="image-container">
         <img class="post-thumbnail" :src="thumbnail">
       </div>
