@@ -3,22 +3,13 @@
     <div class="product-container">
       <section class="product-title-section">
         <h1>{{ product.details.title }}</h1>
-        <span> Av: <nuxt-link :to="`produkter/${toHyphenAndLowerCaseFromSpace(product.details.brand)}`">{{ product.details.brand }} </nuxt-link> </span>
+        <span> Av: <nuxt-link :to="`/produkter/${toHyphenAndLowerCaseFromSpace(product.details.brand)}`">{{ product.details.brand }} </nuxt-link> </span>
       </section>
       <section class="image-section">
         <img class="product-image" :src="product.imageUrl">
       </section>
-      <section class="product-action-section">
-        <div class="flex-container column">
-          <span class="price-now"> {{ product.pricing }},-</span>
-        </div>
-        <div class="buy-button-container">
-          <FlatButton text="Legg i handlevogn" upper-case="true"/>
-        </div>
-        <div class="inventory-container">
-          <span>Tilgjengelig på lager: 40+</span>
-        </div>
-      </section>
+      <ProductAction :product="product">
+      </ProductAction>
       <section class="product-main-info-section">
         <ul>
           <li> <span>Dimensjoner: </span>{{ product.details.dimensions }}</li>
@@ -31,11 +22,11 @@
 <script>
 
   import { mapGetters } from 'vuex';
-  import FlatButton from '@/components/buttons/FlatButton';
+  import ProductAction from '@/components/Products/Product/ProductAction';
   export default {
 
     components: {
-      FlatButton
+      ProductAction
     },
     validate(data) {
       return /^\d+$/.test(data.params.id);
@@ -95,16 +86,7 @@
       margin-right:20px;
     }
   }
-  .product-action-section{
-    grid-area: c;
-    background-color: $color--light-shades;
-    .price-now{
-      font-size:2em;
-    }
-    .buy-button-container{
-      margin: 1em 0;
-    }
-  }
+
 
 h1 {
   font-size: 1.563em;
