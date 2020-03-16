@@ -63,7 +63,6 @@ export const getters = {
         return [...new Set(state.products.map(item => item.details.brand))];
     },
     productsByBrand: state => brand => state.products.filter(el => el.details.brand.toLowerCase() === brand.toLowerCase())
-
 };
 
 export const mutations = {

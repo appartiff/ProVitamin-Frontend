@@ -1,9 +1,12 @@
 <template>
   <div class="content--center">
     <div class="flex-container main-nav desktop--max-width width-full">
-      <div class="logo-container">
-        <img class="logo" src="~/assets/images/Logo.svg">
-      </div>
+      <nuxt-link to="/#">
+        <div class="logo-container">
+          <img class="logo" src="~/assets/images/Logo.svg">
+        </div>
+      </nuxt-link>
+
       <div class="search-container">
         <SearchInput />
       </div>

@@ -4,8 +4,8 @@
       <article>
         <h3>Kontakt</h3>
         <ul>
-          <li>E-mail:  <span>support@topkek.as</span></li>
-          <li>Telefon: <span>93 27 41 25</span></li>
+          <li>E-mail:  <span class="light-accent">support@topkek.as</span></li>
+          <li>Telefon: <span class="light-accent">93 27 41 25</span></li>
         </ul>
       </article>
       <article>
@@ -69,7 +69,9 @@
         display: flex;
         padding-bottom:1em;
     }
-
+    .light-accent {
+      color: $color--light-accent;
+    }
     .main-content--container{
         display: flex;
         flex-wrap:wrap;

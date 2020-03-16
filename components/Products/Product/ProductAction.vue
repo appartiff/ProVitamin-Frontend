@@ -4,7 +4,11 @@
       <span class="price-now"> {{ product.pricing }},-</span>
     </div>
     <div class="buy-button-container">
-      <FlatButton text="Legg i handlevogn" upper-case="true" />
+      <FlatButton
+              text="Legg i handlevogn"
+              upper-case="true"
+              @clicked="addToCart({price: product.pricing,quantity: 1, id: product.id})"
+      />
     </div>
     <div class="inventory-container">
       <span>Tilgjengelig på lager: 40+</span>
@@ -13,6 +17,7 @@
 </template>
 
 <script>
+    import { mapState, mapMutations } from 'vuex';
     import FlatButton from '@/components/buttons/FlatButton';
     export default {
         name: 'ProductAction',
@@ -23,6 +28,17 @@
           product: {
             required: true,
             type: Object
+          }
+      },
+      computed: {
+
+      },
+      methods: {
+        ...mapMutations({
+          addToCart: 'cart/addToCart'
+        }),
+          AddToCart(payload) {
+            this.addToCart(payload);
           }
       }
     }

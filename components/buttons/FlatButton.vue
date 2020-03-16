@@ -1,5 +1,5 @@
 <template>
-  <button :class="{ rounded: rounded }">
+  <button  @click.prevent="clicked" :class="{ rounded: rounded }">
     <span :class="{ upperCase: upperCase }">{{ text }}</span>
   </button>
 </template>
@@ -14,8 +14,18 @@
                   required: true
                 },
                 rounded: Boolean,
-                upperCase: Boolean
-              }
+                upperCase: Boolean,
+                onClick: {
+                  type: Function,
+                  required: false,
+                  default: () => null
+                }
+              },
+      methods: {
+          clicked() {
+            this.$emit('clicked')
+          }
+      }
     }
 </script>
 

@@ -18,6 +18,7 @@ module.exports = {
     "space-before-function-paren":"off",
     "no-trailing-spaces":"off",
     "no-multiple-empty-lines":"off",
-    "no-unused-vars":"off"
+    "no-unused-vars":"off",
+    "curly":"off"
   }
 };

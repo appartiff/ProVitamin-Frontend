@@ -24,7 +24,9 @@
 </template>
 
 <script>
+    import { mapState, mapMutations } from 'vuex';
     import BuyButton from '@/components/buttons/FlatButton';
+
     export default {
       components: {
         BuyButton
@@ -52,6 +54,11 @@
           required: true
         },
         thumbnail: String
+      },
+      computed: {
+        ...mapMutations({
+          addToCart: 'cart/addToCart'
+        })
       }
     }
 </script>
