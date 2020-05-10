@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import IconButton from '../../../buttons/IconButton';
+    import IconButton from '../../../components/buttons/IconButton';
 
     export default {
         components:

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nuxt-link v-for="item in brands" :key="item.id" :to="`/merker/${toHyphenAndLowerCaseFromSpace(item)}`">{{item}}</nuxt-link>
+    <nuxt-link class="dropdown-item" v-for="item in brands" :key="item.id" :to="`/merker/${toHyphenAndLowerCaseFromSpace(item)}`">{{item}}</nuxt-link>
   </div>
 </template>
 

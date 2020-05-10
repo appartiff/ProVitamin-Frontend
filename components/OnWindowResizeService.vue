@@ -19,7 +19,7 @@
                 changeMobileState: 'layout/changeMobileState'
             }),
             handleResize() {
-                this.changeMobileState(window.innerWidth < 990);
+                this.changeMobileState(window.innerWidth <= 767);
             }
 
         }

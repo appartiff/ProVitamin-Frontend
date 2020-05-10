@@ -9,8 +9,8 @@
 
 <script>
     import { mixin as clickaway } from 'vue-clickaway';
-    import NavigationCell from '../../../buttons/NavigationCell';
-    import NavigationDropdown from '../../../dropdownMenus/NavigationDropdown';
+    import NavigationCell from '../../../components/buttons/NavigationCell';
+    import NavigationDropdown from '../../../components/dropdownMenus/NavigationDropdown';
     export default {
         mixins: [clickaway],
         components: {

@@ -12,7 +12,7 @@
 
 <script>
     import IconButton from '@/components/buttons/IconButton';
-    import Basket from '@/components/layout/navigation/mainNavigation/Basket';
+    import Basket from '@/base-blocks/navigation/mainNavigation/Basket';
     export default {
         name: 'SubNavigationMobile',
         components: {
@@ -32,14 +32,17 @@
 <style scoped lang="scss">
     @import '~/assets/styles/variables/_variables.scss';
     .navbar {
-
         background-color: $color--dark-shade;
         position: fixed;
         display: flex;
         border-top: 1px solid $color--dark-shade-lighter;
         bottom: 0;
         width: 100%;
+        overflow: hidden;
         padding: 0.5em 0;
+    }
+    .navbar >* {
+        width:25%;
     }
 
 </style>

@@ -6,14 +6,13 @@
           <img class="logo" src="~/assets/images/Logo.svg">
         </div>
       </nuxt-link>
-
-      <div class="search-container">
+      <div class="search-container" :class="mobile ? 'active' :''">
         <SearchInput />
       </div>
       <div class="nav-right-container">
         <div class="flex">
           <NavigationLogin />
-          <Basket class="basket" />
+          <Basket v-if="!mobile" />
         </div>
       </div>
     </div>
@@ -21,15 +20,21 @@
 </template>
 
 <script>
-   import SearchInput from '@/components/layout/navigation/mainNavigation/SearchInput';
-   import NavigationLogin from '@/components/layout/navigation/mainNavigation/NavigationLogin';
-   import Basket from '@/components/layout/navigation/mainNavigation/Basket';
+  import { mapState } from 'vuex';
+   import SearchInput from '@/base-blocks/navigation/mainNavigation/SearchInput';
+   import NavigationLogin from '@/base-blocks/navigation/mainNavigation/NavigationLogin';
+   import Basket from '@/base-blocks/navigation/mainNavigation/Basket';
     export default {
         components: {
             SearchInput,
             NavigationLogin,
             Basket
+        },
+
+        computed: {
+          ...mapState('layout', ['mobile'])
         }
+
     }
 </script>
 
@@ -38,40 +43,37 @@
 
   @import '~/assets/styles/variables/_variables.scss';
 
+  .flex-container {
+    justify-content: space-between;
+  }
+  .flex-container > * {
+    flex-grow: 1;
+  }
+
+  .active {
+    order: 3;
+    flex: 1 0 100%;
+  }
+
   .main-nav {
-    padding: 1em;
+    padding-top:1em;
+    padding-right: 1em;
+    padding-left:1em;
+  }
+  .main-nav > * {
+    padding-bottom: 1em;
   }
   .search-container {
-    flex-grow: 1;
-    display: flex; /* establish flex container */
-    flex-direction: column; /* make main axis vertical */
+    display: flex;
     justify-content: center; /* center items vertically, in this case */
     align-items: center; /* center items horizontally, in this case */
   }
-  @media #{$mobile} {
-    .search-container{
-      order: 1;
-      padding: 1em!important;
-    }
-    .basket {display:none;}
-  }
-  @media #{$tablet} {
-    .search-container{
-      order: 1;
-      padding: 1em!important;
-    }
-    .logo-container {
-      justify-content: left!important;
-    }
-  }
+
   .logo-container {
-    flex-grow: 1; /* default 0 */
     display: flex;
     justify-content: left;
   }
-
   .nav-right-container {
-    flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: right!important;

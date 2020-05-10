@@ -19,9 +19,9 @@
 
 
      import { mapState } from 'vuex'
-     import SubNavigationDesktop from '@/components/layout/navigation/SubNavigationDesktop';
-     import SubNavigationMobile from '@/components/layout/navigation/SubNavigationMobile';
-    import MainNavigation from '@/components/layout/navigation/MainNavigation';
+     import SubNavigationDesktop from '@/base-blocks/navigation/SubNavigationDesktop';
+     import SubNavigationMobile from '@/base-blocks/navigation/SubNavigationMobile';
+    import MainNavigation from '@/base-blocks/navigation/MainNavigation';
     import Footer from '@/base-blocks/Footer';
     import Breadcrumbs from '@/components/Breadcrumbs';
     import OnWindowResizeService from '@/components/OnWindowResizeService';

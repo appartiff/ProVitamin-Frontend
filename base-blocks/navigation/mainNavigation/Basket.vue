@@ -1,7 +1,7 @@
 <template>
   <IconButton
     :text="cartTotal | toLocalePrice"
-          :cart-count="getCartCount"
+    :cart-count="getCartCount"
   >
     <font-awesome-icon slot="icon" :icon="['fas', 'shopping-basket']" />
   </IconButton>
@@ -9,7 +9,7 @@
 
 <script>
   import { mapState, mapMutations, mapGetters } from 'vuex';
-  import IconButton from '../../../buttons/IconButton';
+  import IconButton from '../../../components/buttons/IconButton';
 
   export default {
     filters: {

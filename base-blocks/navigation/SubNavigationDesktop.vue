@@ -18,8 +18,8 @@
 
 <script>
     import NavigationCell from '@/components/buttons/NavigationCell';
-    import Products from '@/components/layout/navigation/subNavigation/Products';
-    import Brands from '@/components/layout/navigation/subNavigation/Brands';
+    import Products from '@/base-blocks/navigation/subNavigation/Products';
+    import Brands from '@/base-blocks/navigation/subNavigation/Brands';
     export default {
       components: {
           NavigationCell,
