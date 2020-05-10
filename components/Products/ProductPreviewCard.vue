@@ -1,6 +1,7 @@
 <template>
+  <nuxt-link :to="`/produkter/${id}`">
   <article class="product-item text-center">
-    <nuxt-link :to="`/produkter/${id}`">
+
       <div class="image-container">
         <img class="post-thumbnail" :src="thumbnail">
       </div>
@@ -19,8 +20,9 @@
           </div>
         </div>
       </div>
-    </nuxt-link>
+
   </article>
+  </nuxt-link>
 </template>
 
 <script>
@@ -76,7 +78,9 @@
   .product-item:hover{
     border: 1px solid $color--light-accent;
   }
-
+a{
+  height:100%;
+}
 
   .card-bottom{
     display: flex;
@@ -92,7 +96,7 @@
       text-align: left;
 
       span {
-        color: $color--dark-shade;
+        color: $color--dark-accent;
       }
     }
   }

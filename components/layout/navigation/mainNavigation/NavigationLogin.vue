@@ -1,7 +1,7 @@
 <template>
-  <IconButton text="Logg inn">
-    <font-awesome-icon slot="icon" :icon="['fas', 'user']"/>
-  </IconButton>
+    <IconButton @clicked="gotoLogin" text="Logg inn">
+      <font-awesome-icon slot="icon" :icon="['fas', 'user']"/>
+    </IconButton>
 </template>
 
 <script>
@@ -11,7 +11,12 @@
     components:
       {
         IconButton
+      },
+    methods: {
+      gotoLogin() {
+        this.$router.push('/auth')
       }
+    }
   }
 </script>
 

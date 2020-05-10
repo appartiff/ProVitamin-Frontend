@@ -1,9 +1,10 @@
 <template>
   <form>
-    <input v-model="message" placeholder="Søk">
-    <div class="search"><font-awesome-icon :icon="['fas', 'search']"/></div>
+    <input id="search-input" v-model="message" placeholder="Søk">
+    <div class="search">
+      <font-awesome-icon :icon="['fas', 'search']" />
+    </div>
   </form>
-
 </template>
 
 <script>
@@ -29,10 +30,15 @@
   input{
     min-width:400px;
   }
-  @media #{$mobile} {
-    input{
-      min-width: 250px!important;
 
+  @media #{$mobile} {
+    form
+    {
+      width:100%;
+    }
+    input{
+      min-width: 200px!important;
+      width:100%;
     }
   }
 

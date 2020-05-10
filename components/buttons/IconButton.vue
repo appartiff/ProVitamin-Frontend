@@ -1,5 +1,5 @@
 <template>
-  <a class="icon-button">
+  <a class="icon-button" @click.prevent="clicked">
     <div class="icon-box">
       <span v-if="cartCount > 0" class="cart-counter">
         {{cartCount}}
@@ -20,7 +20,12 @@
           type: Number,
           default: 0
         }
+      },
+    methods: {
+      clicked() {
+        this.$emit('clicked')
       }
+    }
 
   }
 </script>
@@ -75,7 +80,7 @@
 
   svg {
     display: block;
-    font-size: 1.2em;
+    font-size: 1em;
     height: 1em;
     width:1em!important;
     color: #fff;

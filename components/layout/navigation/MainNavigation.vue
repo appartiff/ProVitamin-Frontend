@@ -13,7 +13,7 @@
       <div class="nav-right-container">
         <div class="flex">
           <NavigationLogin />
-          <Basket />
+          <Basket class="basket" />
         </div>
       </div>
     </div>
@@ -53,6 +53,7 @@
       order: 1;
       padding: 1em!important;
     }
+    .basket {display:none;}
   }
   @media #{$tablet} {
     .search-container{

@@ -23,7 +23,7 @@
     
     .navigation-cell {
         background-color: transparent;
-        padding: 1em;
+        padding: 1.2em 0.6em;
         text-transform: uppercase;
         color:  $color--light-shades-lighter;
         border: 0;

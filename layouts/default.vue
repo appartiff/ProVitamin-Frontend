@@ -2,32 +2,43 @@
   <div class="site">
     <header>
       <section class="header-section">
-        <MainNavigation></MainNavigation>
-        <SubNavigation></SubNavigation>
+        <MainNavigation />
+        <SubNavigationDesktop v-if="mobile===false" />
+        <SubNavigationMobile v-if="mobile"/>
       </section>
     </header>
     <div class="site-content">
-      <Breadcrumbs/>
+      <Breadcrumbs />
       <nuxt />
     </div>
-
     <Footer />
+    <OnWindowResizeService/>
   </div>
 </template>
 <script>
 
-     import SubNavigation from '@/components/layout/navigation/SubNavigation';
+
+     import { mapState } from 'vuex'
+     import SubNavigationDesktop from '@/components/layout/navigation/SubNavigationDesktop';
+     import SubNavigationMobile from '@/components/layout/navigation/SubNavigationMobile';
     import MainNavigation from '@/components/layout/navigation/MainNavigation';
     import Footer from '@/components/layout/Footer/Footer';
     import Breadcrumbs from '@/components/Breadcrumbs';
+    import OnWindowResizeService from '@/components/OnWindowResizeService';
+
     export default {
         components:
             {
                 MainNavigation,
-                SubNavigation,
+                SubNavigationDesktop,
                 Footer,
-                Breadcrumbs
-            }
+                Breadcrumbs,
+              OnWindowResizeService,
+              SubNavigationMobile
+            },
+      computed: {
+        ...mapState('layout', ['mobile'])
+      }
     }
 </script>
 

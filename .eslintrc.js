@@ -19,6 +19,7 @@ module.exports = {
     "no-trailing-spaces":"off",
     "no-multiple-empty-lines":"off",
     "no-unused-vars":"off",
-    "curly":"off"
+    "curly":"off",
+    "eol-last":"off"
   }
 };

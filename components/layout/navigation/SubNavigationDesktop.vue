@@ -31,6 +31,7 @@
 
 <style lang="scss" scoped>
     @import '~/assets/styles/variables/_variables.scss';
+
     .sub-nav{
         background: #50546D;
     }

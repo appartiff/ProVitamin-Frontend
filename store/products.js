@@ -78,4 +78,4 @@ export const mutations = {
     toggle (state, todo) {
         todo.done = !todo.done
     }
-}
+};

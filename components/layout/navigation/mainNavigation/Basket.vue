@@ -1,6 +1,6 @@
 <template>
   <IconButton
-          :text="cartTotal | toLocalePrice"
+    :text="cartTotal | toLocalePrice"
           :cart-count="getCartCount"
   >
     <font-awesome-icon slot="icon" :icon="['fas', 'shopping-basket']" />
