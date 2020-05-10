@@ -42,7 +42,7 @@ export default {
                 suffix: true,
                 icons: {
                     // list the icons you want to add, not listed icons will be tree-shaked
-                    solid: ['faSearch', 'faUser', 'faShoppingBasket', 'faChevronDown', 'faChevronUp'],
+                    solid: ['faSearch', 'faUser', 'faShoppingBasket', 'faChevronDown', 'faChevronUp', 'faKey'],
                     brands: ['faFacebook', 'faInstagram', 'faLinkedin']
                 }
             }],
@@ -54,7 +54,8 @@ export default {
     */
     modules: [
         // Doc: https://axios.nuxtjs.org/usage
-        '@nuxtjs/axios'
+        '@nuxtjs/axios',
+        '@nuxtjs/bulma'
     ],
     /*
     ** Axios module configuration

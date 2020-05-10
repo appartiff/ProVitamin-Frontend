@@ -1,19 +1,19 @@
 <template>
-  <div v-if="show" class="flex-container breadcrumb desktop--max-width">
+  <nav class="breadcrumb" aria-label="breadcrumbs" v-if="show">
     <ul>
       <li>
         <nuxt-link to="/#">
           Hjem
         </nuxt-link>
       </li>
-      <li v-for="(item , index) in breadcrumbs" :key="item.message">
+      <li v-for="(item , index) in breadcrumbs" :key="item.message" :class="index === breadcrumbs.length-1 ? 'is-active' :''">
         <nuxt-link v-if="index !== breadcrumbs.length-1 && getLatest(item.path).length >0" :to="item.path">
           {{ getLatest(item.path) | toSpaceFromHyphen }}
         </nuxt-link>
-        <span v-else> {{ getLatest(item.path) | toSpaceFromHyphen }}</span>
+        <a v-else> {{ getLatest(item.path) | toSpaceFromHyphen }}</a>
       </li>
     </ul>
-  </div>
+  </nav>
 </template>
 
 <script>
@@ -80,28 +80,9 @@
         color: $color--dark-shade;
         user-select: none;
     }
-
-    .breadcrumb {
-        margin: 0 auto;
-    }
-
     ul {
         padding: 10px 16px;
         list-style: none;
-    }
-
-    /* Display list items side by side */
-    ul li {
-        display: inline;
-        font-size: 1em;
-        text-transform: capitalize;
-    }
-
-    /* Add a slash symbol (/) before/behind each list item */
-    ul li + li:before {
-        padding: 8px;
-        color: black;
-        content: "/\00a0";
     }
 
     /* Add a color to all links inside the list */

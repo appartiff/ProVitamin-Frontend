@@ -22,7 +22,7 @@
      import SubNavigationDesktop from '@/components/layout/navigation/SubNavigationDesktop';
      import SubNavigationMobile from '@/components/layout/navigation/SubNavigationMobile';
     import MainNavigation from '@/components/layout/navigation/MainNavigation';
-    import Footer from '@/components/layout/Footer/Footer';
+    import Footer from '@/base-blocks/Footer';
     import Breadcrumbs from '@/components/Breadcrumbs';
     import OnWindowResizeService from '@/components/OnWindowResizeService';
 

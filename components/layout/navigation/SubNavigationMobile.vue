@@ -32,11 +32,10 @@
 <style scoped lang="scss">
     @import '~/assets/styles/variables/_variables.scss';
     .navbar {
-        overflow: hidden;
+
         background-color: $color--dark-shade;
         position: fixed;
         display: flex;
-        flex-flow: row wrap;
         border-top: 1px solid $color--dark-shade-lighter;
         bottom: 0;
         width: 100%;
