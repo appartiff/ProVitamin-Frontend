@@ -1,5 +1,5 @@
 <template>
-  <div class="control has-icons-left has-icons-right">
+  <div class="control has-icons-right">
     <input class="input" type="text" placeholder="Search">
     <span class="icon is-small is-right">
       <font-awesome-icon :icon="['fas', 'search']" />

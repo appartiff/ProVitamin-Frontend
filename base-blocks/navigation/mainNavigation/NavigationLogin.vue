@@ -14,7 +14,7 @@
             },
         methods: {
             gotoLogin() {
-                this.$router.push('/auth')
+                this.$router.push('/auth/logg-inn')
             }
         }
     }

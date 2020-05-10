@@ -6,7 +6,7 @@
     <div class="buy-button-container">
       <FlatButton
               text="Legg i handlevogn"
-              upper-case="true"
+              :upper-case="true"
               @clicked="addToCart({price: product.pricing,quantity: 1, id: product.id})"
       />
     </div>
@@ -36,10 +36,7 @@
       methods: {
         ...mapMutations({
           addToCart: 'cart/addToCart'
-        }),
-          AddToCart(payload) {
-            this.addToCart(payload);
-          }
+        })
       }
     }
 </script>

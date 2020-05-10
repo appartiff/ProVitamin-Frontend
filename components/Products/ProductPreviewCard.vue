@@ -1,7 +1,6 @@
 <template>
   <nuxt-link :to="`/produkter/${id}`">
   <article class="product-item text-center">
-
       <div class="image-container">
         <img class="post-thumbnail" :src="thumbnail">
       </div>
@@ -16,11 +15,10 @@
             </div>
           </div>
           <div class="button-wrapper">
-            <BuyButton text="Kjøp" rounded="true" />
+            <BuyButton text="Kjøp" :rounded="true" @clicked="addToCart({price: price,quantity: 1, id: id})"/>
           </div>
         </div>
       </div>
-
   </article>
   </nuxt-link>
 </template>
@@ -57,7 +55,7 @@
         },
         thumbnail: String
       },
-      computed: {
+      methods: {
         ...mapMutations({
           addToCart: 'cart/addToCart'
         })

@@ -1,30 +1,36 @@
 <template>
   <div class="wrapper">
-    <ProductPreviewCard
-      v-for="product in productCollection"
-      :key="product.id"
-      :price="product.pricing"
-      :title="product.details.title"
-      :description="product.details.description"
-      :thumbnail="product.imageUrl"
-      :id="product.id"
-    />
+      <ProductPreviewCard
+        v-for="product in productCollection"
+        :id="product.id"
+        :key="product.id"
+        :price="product.pricing"
+        :title="product.details.title"
+        :description="product.details.description"
+        :thumbnail="product.imageUrl"
+      />
   </div>
 </template>
 
 <script>
+  import { mapState } from 'vuex';
     import ProductPreviewCard from '@/components/Products/ProductPreviewCard';
+
     export default {
         name: 'ProductList',
         components: {
             ProductPreviewCard
+
         },
         props: {
             productCollection: {
                 type: Array,
                 required: true
             }
-        }
+        },
+      computed: {
+        ...mapState('layout', ['mobile'])
+      }
     }
 </script>
 
